@@ -61,3 +61,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+
+// Carousel functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const carouselContainer = document.querySelector('.carousel-container');
+  const portfolioGrid = document.querySelector('.portfolio-grid');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  const images = document.querySelectorAll('.portfolio-grid img');
+  
+  let currentIndex = 0;
+  const visibleImages = 4;
+  let maxIndex = Math.max(images.length - visibleImages, 0);
+
+  function updateCarousel() {
+      const containerWidth = carouselContainer.offsetWidth;
+      const imageWidth = containerWidth / visibleImages;
+      portfolioGrid.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+      
+      leftArrow.disabled = currentIndex === 0;
+      rightArrow.disabled = currentIndex >= maxIndex;
+  }
+
+  leftArrow.addEventListener('click', () => {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+      }
+  });
+
+  rightArrow.addEventListener('click', () => {
+      if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateCarousel();
+      }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+      maxIndex = Math.max(images.length - visibleImages, 0);
+      updateCarousel();
+  });
+
+  // Initial setup
+  updateCarousel();
+});
