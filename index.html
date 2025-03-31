@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Stem - Professional Tree Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Single Stem</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+          <h1>Professional Tree Care Services</h1>
+          <p>Eco-friendly solutions for your landscaping needs</p>
+          <button class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Free Quote</button>
+      </div>
+  </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-tree"></i>
+                <h3>Tree Removal</h3>
+                <p>Safe, eco-friendly removal without heavy equipment. We protect your property while efficiently removing unwanted trees.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-person-digging"></i>
+                <h3>Mulch Installation</h3>
+                <p>Professional mulch application that enhances your landscape's beauty while protecting your plants.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cut"></i>
+                <h3>Hedge Trimming</h3>
+                <p>Precision trimming services to maintain healthy, beautiful hedges and shrubs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Our Work</h2>
+        <div class="portfolio-grid">
+            <img src="project1-placeholder.jpg" alt="Tree Removal Project">
+            <img src="project2-placeholder.jpg" alt="Mulch Installation">
+            <img src="project3-placeholder.jpg" alt="Hedge Trimming">
+            <img src="project4-placeholder.jpg" alt="Landscape Cleanup">
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2>Customer Testimonials</h2>
+        <div class="review-cards">
+            <div class="review-card">
+                <p>"Single Stem did an amazing job removing our old norway spruce tree without damaging the surrounding landscape!"</p>
+                <h4>- Placeholder review</h4>
+            </div>
+            <div class="review-card">
+                <p>"Fast, professional service. Our hedges have never looked better!"</p>
+                <h4>- Placeholder review</h4>
+            </div>
+            <div class="review-card">
+                <p>"Eco-friendly approach and great communication. Highly recommend!"</p>
+                <h4>- Placeholder review</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+          <form id="contact-form" name="contact-form">
+              <h4>Contact Us</h4>
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="tel" name="phone" placeholder="Phone" required>
+              <select name="service" required>
+                  <option value="">Select Service</option>
+                  <option value="tree">Tree Removal</option>
+                  <option value="mulch">Mulch Installation</option>
+                  <option value="hedge">Hedge Trimming</option>
+              </select>
+              <textarea name="message" rows="7" placeholder="Your Message"></textarea>
+              <input type="submit" value="Submit Request" id="submit">
+              <div id="formMessage"></div>
+          </form>
+      </div>
+  </section>
+
+
+    <footer>
+        <p>&copy; 2025 Single Stem. All rights reserved.</p>
+        <p>Contact: (123)-123-1234 | singlestem@outlook.com</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
