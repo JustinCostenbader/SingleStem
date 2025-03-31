@@ -1,5 +1,5 @@
 # SingleStem Website
-A lightweight, cost-effective website for landscaping/tree removal businesses with form-to-spreadsheet-email functionality.
+A lightweight, cost-effective website for landscaping/tree removal businesses with form-to-spreadsheet-to-email functionality.
 
 ### Key Features
 - Contact form submissions to Google Sheets with automatic email notifications for new inquiries.
